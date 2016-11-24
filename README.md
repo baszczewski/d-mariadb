@@ -16,10 +16,13 @@ Running
 * expose port to host (insecure);
 * store database on host directory;
 
+```bash
 docker run -d --name mariadb -p 3306:3306 -e 'MARIADB_USER=user' -e 'MARIADB_PASS=password' -v /home/user/mariadb:/db:Z baszczewski/mariadb
+```
 
 **the preferred option**
 
 * use link to access database;
-
+```bash
 docker run -d --name mariadb -e 'MARIADB_USER=user' -e 'MARIADB_PASS=password' baszczewski/mariadb
+```
